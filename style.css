@@ -1,0 +1,142 @@
+/* Import czcionki Roboto z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Zastosowanie czcionki Roboto */
+    background-color: #f0f0f0; /* Jasne tło dla kontrastu */
+    color: #333; /* Ciemniejszy kolor tekstu dla lepszej czytelności */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 90%; /* Lepsze dopasowanie do ekranu */
+    max-width: 1200px; /* Większa maksymalna szerokość */
+    text-align: center;
+    padding: 20px; /* Dodanie odstępów wewnątrz kontenera */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lekki cień dla głębi */
+    background-color: #ffffff; /* Jasne tło kontenera */
+    border-radius: 8px; /* Zaokrąglenie rogów */
+}
+
+.header h1 {
+    margin-bottom: 30px; /* Większy odstęp pod nagłówkiem */
+    color: #333; /* Ciemniejszy kolor tekstu */
+}
+
+canvas {
+    width: 100%;
+    height: auto; /* This maintains the aspect ratio */
+    image-rendering: pixelated; /* This style ensures that the canvas is scaled up without blurring */    background-color: #e9e9e9; /* Jasniejsze tło dla canvas */
+    margin-bottom: 30px; /* Większy odstęp */
+    border: 1px solid #ccc; /* Subtelna obramówka */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Dodanie odstępów między elementami kontrolnymi */
+}
+.input-group {
+    display: flex;
+    align-items: stretch; /* Zapewnia, że elementy flex rozciągają się, aby wypełnić dostępną przestrzeń */
+    margin: 10px 0;
+}
+.input-group, .selectors, .range-slider, #startSorting {
+    width: 100%; /* Pełna szerokość dla lepszego ustawienia */
+    max-width: 600px; /* Ograniczenie maksymalnej szerokości */
+    margin: 0 auto; /* Centrowanie elementów */
+    padding: 10px; /* Dodanie paddingu dla lepszego wyglądu */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+}
+
+.input-group input, .input-group button, #startSorting, select {
+    
+    border: 2px solid #ccc; /* Grubsza obramówka */
+    background-color: #fafafa; /* Jasniejsze tło */
+    color: #333; /* Ciemniejszy tekst */
+    padding: 12px; /* Większy padding */
+    margin: 0 5px; /* Odstępy między elementami */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+    font-weight: 500; /* Pogrubienie tekstu */
+}
+
+.input-group button, #startSorting {
+    cursor: pointer;
+    display: inline-flex; /* Wyśrodkowanie ikon i tekstu */
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Odstęp między ikoną a tekstem */
+}
+
+.range-slider {
+    display: flex;
+    align-items: center; /* Wycentrowanie suwaka wertykalnie */
+    justify-content: center; /* Wycentrowanie suwaka horyzontalnie */
+    padding: 10px 0; /* Dodanie paddingu od góry i dołu */
+}
+.button-group {
+    display: flex;
+    justify-content: space-around; /* Rozkłada przyciski równomiernie */
+}
+
+.input-group input {
+    /* Aby input miał pełną szerokość, usuniemy marginesy z boków */
+    margin: 0 auto;
+    width: calc(100% - 24px); /* Odejmujemy padding z lewej i prawej */
+}
+.range-slider .material-icons {
+    /* Jeśli chcesz, aby ikona była mniejsza lub większa, możesz dostosować font-size. */
+    font-size: 24px; /* Na przykład zmniejszenie rozmiaru ikony */
+    margin-right: 10px; /* Dostosowanie odstępu między ikoną a suwakiem */
+}
+
+.range-slider input[type="range"] {
+    flex: 1; /* Pozwala suwakowi na rozciągnięcie się i wypełnienie dostępnego miejsca */
+    margin: 0 15px; /* Dodaje odstępy z lewej i prawej strony suwaka */
+}
+
+#resultLabel {
+    margin-top: 20px;
+    color: #666; /* Ciemniejszy kolor tekstu dla lepszej widoczności */
+    font-size: 16px; /* Większa czcionka dla czytelności */
+}
+
+.material-icons {
+    font-size: 24px; /* Większe ikony */
+}
+
+.input-group {
+    margin-bottom: 15px; /* Odstęp między grupą wejściową a grupą przycisków */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Zapewnienie, że przyciski będą rozstawione równomiernie */
+}
+
+.button-group button {
+    flex: 1; /* Każdy przycisk zajmie równą część dostępnego miejsca */
+    margin: 0 5px; /* Odstęp między przyciskami */
+    border: 2px solid #ccc; /* Grubsza obramówka */
+    background-color: #fafafa; /* Jasniejsze tło */
+    color: #333; /* Ciemniejszy tekst */
+    padding: 12px; /* Większy padding */
+    margin: 0 5px; /* Odstępy między elementami */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+    font-weight: 500; /* Pogrubienie tekstu */
+}
+
+.button-group button:first-child {
+    margin-left: 0; /* Usunięcie lewego marginesu dla pierwszego przycisku */
+}
+
+.button-group button:last-child {
+    margin-right: 0; /* Usunięcie prawego marginesu dla ostatniego przycisku */
+}

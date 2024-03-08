@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizualizacja Algorytmów Sortowania</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Wizualizacja Algorytmów Sortowania</h1>
+        </div>
+        <canvas id="canvas" width="600" height="400"></canvas>
+        <div class="controls">
+            <!-- Zaktualizowane przyciski z opisami -->
+            <div class="input-group">
+                <input type="text" id="numbersInput" placeholder="Liczby do posortowania">
+                <button id="generateNumbers"><span class="material-icons">shuffle</span> Generuj liczby</button>
+                <button id="clearNumbers"><span class="material-icons">clear</span> Wyczyść</button>
+            </div>
+            <button id="startSorting"><span class="material-icons">play_arrow</span> Sortuj</button>
+            <!-- Zmieniona kolejność - teraz suwak prędkości i selektor algorytmu pojawiają się po przyciskach akcji -->
+            <div class="selectors">
+                <select id="algorithmSelector">
+                    <option value="bubbleSort">Bąbelkowe</option>
+                    <option value="insertionSort">Przez wstawianie</option>
+                    <option value="quickSort">Szybkie</option>
+                </select>
+                <div class="range-slider">
+                    <span class="material-icons">speed</span>
+                    <input type="range" id="animationSpeed" min="1" max="100" value="50">
+                </div>
+            </div>
+        </div>
+        <div id="resultLabel">Oczekiwanie na dane...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
